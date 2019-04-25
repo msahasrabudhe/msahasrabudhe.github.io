@@ -1,6 +1,190 @@
-<HTML>
+<!DOCTYPE html>
+<html lang="en">
 
-<BODY>
-It works!
-</BODY>
-</HTML>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lifting Autoencoders</title>
+    <meta name="description" content="Project Page for Deforming Autoencoders">
+    <meta name="author" content="Zhixin Shu">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="./style_files/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="./style_files/custom.css" type="text/css" rel="stylesheet">
+    <meta property="og:image"   content="http://www3.cs.stonybrook.edu/~cvl/dae_files/intr.png" />
+</head>
+
+<body>
+    <link rel="stylesheet" type="text/css" href="./dae_files/dae.css" media="screen">
+    <h1>
+        Deforming Autoencoders: Unsupervised Learning of a Fully-Disentangled 3D Morphable Model using Deep Non-Rigid Structure from Motion
+    </h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <td><a href="https://msahasrabudhe.github.io/">Mihir Sahasrabudhe*</a>
+                    <span class="super">1</span>
+                </td>
+                <td><a href="https://zhixinshu.github.io/">Zhixin Shu*</a>
+                    <span class="super">2</span>
+                </td>
+                <td><a href="https://www.turing.ac.uk/people/doctoral-students/edward-bartrum">Edward Bartrum</a>
+                    <span class="super">3,4</span>
+                </td>
+                <td><a href="http://alpguler.com/">Rıza Alp Güler</a>
+                    <span class="super">5,6</span>
+                </td>
+                <td><a href="http://www3.cs.stonybrook.edu/~samaras/">Dimitris Samaras</a>
+                    <span class="super">2</span>
+                </td>
+                <td><a href="http://www0.cs.ucl.ac.uk/staff/I.Kokkinos/">Iasonas Kokkinos</a>
+                    <span class="super">4,5</span>
+                </td>
+            </tr>
+            <!-- email addresses are commented as they look not good. But you can find them here:) -->
+            <!-- <tr>
+            <td>kemmaATcsDOTstonybrookDOTedu</td>
+            <td>minhhuaiATcsDOTstonybrookDOTedu</td>
+            <td>samarasATcsDOTstonybrookDOTedu</td>
+        </tr> -->
+            <tr>
+                <td colspan="1">
+                    1 CentraleSup&eacute;lec, Universit&eacute; Paris-Saclay
+                </td>
+                <td colspan="1">
+                    2 Stony Brook University
+                </td>
+                <td colspan="1">
+                    3 The Alain Turing Institute
+                </td>
+                <td colspan="1">
+                    4 University College London
+                </td>
+                <td colspan="1">
+                    5 Ariel AI
+                </td>
+                <td colspan="1">
+                    6 Imperial College
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <h2>
+        Abstract
+    </h2>
+    <div class="text"> In this work we introduce Deforming Autoencoders, a generative model for images that disentangles shape from appearance in an unsupervised manner. As in the deformable template paradigm, shape is represented as a deformation between a canonical coordinate system (`template') and an observed image, while appearance is modeled in deformation-invariant, template coordinates. We introduce novel techniques that allow this approach to be deployed in the setting of autoencoders and show that this method can be used for unsupervised group-wise image alignment. We show experiments with expression morphing in humans, hands, and digits, face manipulation, such as shape and appearance interpolation, as well as unsupervised landmark localization. We also achieve a more powerful form of unsupervised disentangling in template coordinates, that successfully decomposes face images into shading and albedo, allowing us to further manipulate face images.
+    </div>
+
+    <h2>
+        Video
+    </h2>
+    <table id="imgtable">
+        <tbody>
+            <tr>
+                <td class="imgitem">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hwVGD6BYZd0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </td>
+            </tr>
+    </table>
+
+
+    <h2>
+        Deformable Template
+    </h2>
+    <table id="imgtable">
+        <tbody>
+            <tr>
+                <td class="imgitem">
+                    <img src="./dae_files/dt.png" alt="p1">
+                </td>
+            </tr>
+    </table>
+
+    <h2>
+        Network Architectures
+    </h2>
+    <table id="imgtable">
+        <tbody>
+            <tr>
+                <td class="imgitem">
+                    <img src="./dae_files/arc4.png" alt="p1">
+                </td>
+            </tr>
+    </table>
+
+    <h2>
+        Unsupervised Appearance Inference
+    </h2>
+    <table id="imgtable">
+        <tbody>
+            <tr>
+                <td class="imgitem">
+                    <img src="./dae_files/appearance.png" alt="p1">
+                </td>
+            </tr>
+    </table>
+
+    <h2>
+        Unsupervised Intrinsic Decomposition for Faces
+    </h2>
+    <table id="imgtable">
+        <tbody>
+            <tr>
+                <td class="imgitem">
+                    <img src="./dae_files/intr.png" alt="p1">
+                </td>
+            </tr>
+    </table>
+
+    <h2>
+        Face Image Manipulation
+    </h2>
+    <table id="imgtable">
+        <tbody>
+            <tr>
+                <td class="imgitem">
+                    <img src="./dae_files/manip.png" alt="p1">
+                </td>
+            </tr>
+    </table>
+
+    <h4>
+        Code
+    </h4>
+    <table id="dltable">
+        <tbody>
+            <tr>
+                <td>
+                    <a href="https://github.com/zhixinshu/DeformingAutoencoders-pytorch">PyTorch Implementation.</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="text">
+        If using the code, please cite:
+        <br>
+        <a href="http://www3.cs.stonybrook.edu/~cvl/content/papers/2018/Shu_ECCV18.pdf">Deforming Autoencoders: Unsupervised Disentangling of Shape and Appearance, </a>Zhixin Shu, Mihir Sahasrabudhe, Riza Alp Guler, Dimitris Samaras, Nikos Paragios, and Iasonas Kokkinos. European Conference on Computer Vision (ECCV), 2018  [
+        <a href="http://www3.cs.stonybrook.edu/~cvl/content/papers/2018/Shu_ECCV18.bib">BibTex</a> ]
+    </div>
+
+    <h2>
+        Acknowledgements
+    </h2>
+    <div class="text">
+        This work was supported by a gift from Adobe, NSF grants CNS-1718014 and DMS 1737876, the Partner University Fund, and the SUNY2020 Infrastructure Transportation Security Center. Rıza Alp Güler was supported by the European Horizons 2020 grant no 643666 (I-Support).
+    </div>
+
+    <div class="text">
+         © All rights reserved.
+    </div>
+
+
+
+</body>
+
+</html>
