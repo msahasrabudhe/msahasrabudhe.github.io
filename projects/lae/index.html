@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lifting Autoencoders</title>
-    <meta name="description" content="Project Page for Deforming Autoencoders">
-    <meta name="author" content="Zhixin Shu">
+    <meta name="description" content="Project Page for Lifting Autoencoders">
+    <meta name="author" content="Mihir Sahasrabudhe">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="./style_files/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="./style_files/custom.css" type="text/css" rel="stylesheet">
@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <link rel="stylesheet" type="text/css" href="./dae_files/dae.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="./lae.css" media="screen">
     <h1>
         Deforming Autoencoders: Unsupervised Learning of a Fully-Disentangled 3D Morphable Model using Deep Non-Rigid Structure from Motion
     </h1>
@@ -76,7 +76,22 @@
     <h2>
         Abstract
     </h2>
-    <div class="text"> In this work we introduce Deforming Autoencoders, a generative model for images that disentangles shape from appearance in an unsupervised manner. As in the deformable template paradigm, shape is represented as a deformation between a canonical coordinate system (`template') and an observed image, while appearance is modeled in deformation-invariant, template coordinates. We introduce novel techniques that allow this approach to be deployed in the setting of autoencoders and show that this method can be used for unsupervised group-wise image alignment. We show experiments with expression morphing in humans, hands, and digits, face manipulation, such as shape and appearance interpolation, as well as unsupervised landmark localization. We also achieve a more powerful form of unsupervised disentangling in template coordinates, that successfully decomposes face images into shading and albedo, allowing us to further manipulate face images.
+    <div class="text"> In this work we introduce Lifting Autoencoders, a 
+    generative 3D surface-based model of object categories. We bring 
+    together ideas from non-rigid structure from motion, image formation, 
+    and morphable models to learn a controllable, geometric model of 3D 
+    categories in an entirely unsupervised manner from an unstructured 
+    set of images. We exploit the 3D geometric nature of our model and 
+    use normal information to disentangle appearance into illumination, 
+    shading and albedo. We further use weak supervision to disentangle 
+    the non-rigid shape variability of human faces into identity and 
+    expression. We combine the 3D representation with a differentiable 
+    renderer to generate RGB images and  append an adversarially 
+    trained refinement network  to obtain sharp, photorealistic image 
+    reconstruction results. The learned generative model can be 
+    controlled in terms of interpretable geometry and appearance 
+    factors, allowing us to perform photorealistic image manipulation 
+    of identity, expression, 3D  pose, and illumination properties. 
     </div>
 
     <h2>
@@ -93,13 +108,13 @@
 
 
     <h2>
-        Deformable Template
+        Shape from unconstrained images
     </h2>
     <table id="imgtable">
         <tbody>
             <tr>
                 <td class="imgitem">
-                    <img src="./dae_files/dt.png" alt="p1">
+                    <img src="images/teaser6.png" alt="p1">
                 </td>
             </tr>
     </table>
@@ -111,31 +126,31 @@
         <tbody>
             <tr>
                 <td class="imgitem">
-                    <img src="./dae_files/arc4.png" alt="p1">
+                    <img src="images/model.png" alt="p1">
                 </td>
             </tr>
     </table>
 
     <h2>
-        Unsupervised Appearance Inference
+        Learnt shape visualisation from different viewpoints
     </h2>
     <table id="imgtable">
         <tbody>
             <tr>
                 <td class="imgitem">
-                    <img src="./dae_files/appearance.png" alt="p1">
+                    <img src="images/rotation.png" alt="p1">
                 </td>
             </tr>
     </table>
 
     <h2>
-        Unsupervised Intrinsic Decomposition for Faces
+        Interpolating 
     </h2>
     <table id="imgtable">
         <tbody>
             <tr>
                 <td class="imgitem">
-                    <img src="./dae_files/intr.png" alt="p1">
+                    <img src="images/all_interpolations.png" alt="p1">
                 </td>
             </tr>
     </table>
@@ -159,7 +174,8 @@
         <tbody>
             <tr>
                 <td>
-                    <a href="https://github.com/zhixinshu/DeformingAutoencoders-pytorch">PyTorch Implementation.</a>
+                    <!-- <a href="https://github.com/zhixinshu/DeformingAutoencoders-pytorch">PyTorch Implementation.</a> -->
+                    Pytorch Implementation coming soon.
                 </td>
             </tr>
         </tbody>
@@ -172,12 +188,14 @@
         <a href="http://www3.cs.stonybrook.edu/~cvl/content/papers/2018/Shu_ECCV18.bib">BibTex</a> ]
     </div>
 
+    <!--
     <h2>
         Acknowledgements
     </h2>
     <div class="text">
         This work was supported by a gift from Adobe, NSF grants CNS-1718014 and DMS 1737876, the Partner University Fund, and the SUNY2020 Infrastructure Transportation Security Center. Rıza Alp Güler was supported by the European Horizons 2020 grant no 643666 (I-Support).
     </div>
+    -->
 
     <div class="text">
          © All rights reserved.
