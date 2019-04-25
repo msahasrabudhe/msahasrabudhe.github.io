@@ -1,0 +1,76 @@
+h1
+{
+    font-size: 22px;
+    text-align:center; 
+    color:black;
+}
+
+h2
+{
+    font-size: 16px;
+}
+
+body
+{
+    font-family: Arial;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+table
+{
+    
+    font-size: 14px;
+    margin: auto;
+    text-align:center; 
+    color:black;
+    width: 75%
+}
+
+p
+{
+    text-align: justify;
+    font-size: 14px;
+    color:darkgray;
+}
+
+.author
+{
+    text-align: center;
+    font-weight: bold;
+}
+
+.text
+{
+    font-size: 14px;
+    /* text-align: justify;  */
+    color:slategray;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.super
+{
+    vertical-align: super;
+    font-size: 10px
+}
+.sub
+{
+    vertical-align: sub;
+    font-size: 10px
+}
+
+#imgtable img
+{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.bib
+{
+    color: black;
+    background-color: gainsboro;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
