@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Lifting Autoencoders</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <base href="/"> -->
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 class="col-md-12 text-center">
+                <b>Lifting Autoencoders</b><br />
+            </h1>
+            <h2 class="col-md-12 text-center">
+                Unsupervised Learning of a Fully-Disentangled 3D Morphable Model<br />
+                using Deep Non-Rigid Structure from Motion<br />
+                <small>
+                    arXiv preprint
+                </small>
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://msahasrabudhe.github.io">
+                            Mihir Sahasrabudhe<sup>&dagger;</sup>
+                        </a>
+                        </br>CentraleSup&eacute;lec<br />
+                        Universit&eacute; Paris-Saclay
+                    </li>
+                    <li>
+                        <a href="https://zhixinshu.github.io">
+                          Zhixin Shu<sup>&dagger;</sup>
+                        </a>
+                        </br>Stony Brook University<br />&nbsp;
+                    </li>
+                    <li>
+                        <a href="https://www.turing.ac.uk/people/doctoral-students/edward-bartrum">
+                          Edward Bartrum
+                        </a>
+                        </br>The Alan Turing Institute<br />
+                        University College London
+                    </li>
+                    <li>
+                        <a href="https://alpguler.com/">
+                          R&#305;za Alp G&#252;ler
+                        </a>
+                        </br>Ariel AI<br />
+                        Imperial College
+                    </li>
+                    <li>
+                        <a href="http://www3.cs.stonybrook.edu/~samaras/">
+                            Dimitris Samaras
+                        </a>
+                        <br />Stony Brook University<br />&nbsp;
+                    </li>
+                    <li>
+                        <a href="http://www0.cs.ucl.ac.uk/staff/I.Kokkinos/">
+                            Iasonas Kokkinos
+                        </a>
+                        <br />Ariel AI<br />University College London
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <small>
+                            <sup>&dagger;</sup> signifies equal contribution
+                        </small>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- <div class="row" id="header_img"> -->
+        <!--     <figure class="col&#45;md&#45;8 col&#45;md&#45;offset&#45;2"> -->
+        <!--     <image src="img/teaser.png" class="img&#45;responsive" alt="overview"> -->
+        <!--         <figcaption> -->
+        <!--         </figcaption> -->
+        <!--     </figure> -->
+        <!-- </div> -->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center last">
+            <p>
+
+
+
+
+                [Video here]
+
+
+
+
+            </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <p class="text-justify">
+                    In this work we introduce Lifting Autoencoders, a 
+                    generative 3D surface-based model of object categories. We bring 
+                    together ideas from non-rigid structure from motion, image formation, 
+                    and morphable models to learn a controllable, geometric model of 3D 
+                    categories in an entirely unsupervised manner from an unstructured 
+                    set of images. We exploit the 3D geometric nature of our model and 
+                    use normal information to disentangle appearance into illumination, 
+                    shading and albedo. We further use weak supervision to disentangle 
+                    the non-rigid shape variability of human faces into identity and 
+                    expression. We combine the 3D representation with a differentiable 
+                    renderer to generate RGB images and  append an adversarially 
+                    trained refinement network  to obtain sharp, photorealistic image 
+                    reconstruction results. The learned generative model can be 
+                    controlled in terms of interpretable geometry and appearance 
+                    factors, allowing us to perform photorealistic image manipulation 
+                    of identity, expression, 3D  pose, and illumination properties. 
+                </p>
+            </div>
+        </div>
+
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                  Shape from Unconstrained Images
+                </h3>
+                <p class="text-justify">
+                    <img src="images/teaser6.png" alt="p1" width="100%">
+                </p>
+            </div>
+        </div>
+
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Network Architectures
+                </h3>
+                Shape learning using reprojection loss
+                <p style="text-align:center">
+                    <img src="images/model.png" alt="p1" width="100%">
+                </p>
+                Geometry-based disentanglement of albedo and shading
+                <p style="text-align:center">
+                    <img src="images/albedodecode.png" alt="p1" width="70%">
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                <!-- <h3 class="text&#45;center"> -->
+                    Downloads
+                </h3>
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="https://arxiv.org/">
+                                Paper
+                            </a>
+                        </li>
+                        <li>
+                                Code<br/>(coming soon)
+                        </li>
+                        <li>
+                                Pretrained models<br />(coming soon)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>
+
