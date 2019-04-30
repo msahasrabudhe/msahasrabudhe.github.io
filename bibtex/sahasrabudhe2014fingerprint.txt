@@ -1,0 +1,8 @@
+@inproceedings{sahasrabudhe2014fingerprint,
+  title={Fingerprint enhancement using unsupervised hierarchical feature learning},
+  author={Sahasrabudhe, Mihir and Namboodiri, Anoop M},
+  booktitle={Proceedings of the 2014 Indian Conference on Computer Vision Graphics and Image Processing},
+  pages={2},
+  year={2014},
+  organization={ACM}
+}
