@@ -1,0 +1,8 @@
+@inproceedings{vakalopoulou2019image,
+    title={Image Registration of Satellite Imagery with Deep Convolutional Neural Networks},
+    author={Vakalopoulou, Maria and Christodoulidis, Stergios and Sahasrabudhe, Mihir and Mougiakakou, Stavroula and Paragios, Nikos},
+    booktitle={IGARSS 2019-2019 IEEE International Geoscience and Remote Sensing Symposium},
+    pages={4939--4942},
+    year={2019},
+    organization={IEEE}
+}

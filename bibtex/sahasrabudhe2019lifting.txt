@@ -1,0 +1,7 @@
+@inproceedings{sahasrabudhe2019lifting,
+    title={Lifting autoencoders: Unsupervised learning of a fully-disentangled 3d morphable model using deep non-rigid structure from motion},
+    author={Sahasrabudhe, Mihir and Shu, Zhixin and Bartrum, Edward and Alp Guler, Riza and Samaras, Dimitris and Kokkinos, Iasonas},
+    booktitle={Proceedings of the IEEE International Conference on Computer Vision Workshops},
+    pages={0--0},
+    year={2019}
+}

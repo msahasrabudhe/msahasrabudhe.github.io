@@ -1,0 +1,6 @@
+@article{sahasrabudhe2019proof,
+  title={Proof of Correctness and Time Complexity Analysis of a Maximum Distance Transform Algorithm},
+  author={Sahasrabudhe, Mihir and Chandra, Siddhartha},
+  journal={arXiv preprint arXiv:1908.01662},
+  year={2019}
+}
