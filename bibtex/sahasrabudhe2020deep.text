@@ -1,0 +1,10 @@
+@article{sahasrabudhe2020deep,
+    title={Deep multi-instance learning using multi-modal data for diagnosis of lymphocytosis},
+    author={Sahasrabudhe, Mihir and Sujobert, Pierre and Zacharaki, Evangelia I and Maurin, Eug{\'e}nie and Grange, B{\'e}atrice and Jallades, Laurent and Paragios, Nikos and Vakalopoulou, Maria},
+    journal={IEEE Journal of Biomedical and Health Informatics},
+    volume={25},
+    number={6},
+    pages={2125--2136},
+    year={2020},
+    publisher={IEEE}
+}
